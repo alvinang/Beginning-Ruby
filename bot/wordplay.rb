@@ -26,11 +26,11 @@ end
 
 class String
 	def sentences
-		gsub(/\n|\r/, ' ').split(/\.\s*/)		
-	end
+		gsub(/\n|\r/, ' ').split(/\.\s*/)	# \n - newline, \r - carriage return, \s - whitespaces	
+	end										# * - zero or more times, [ ] - matches a single character
 
 	def words
-		scan(/\w[\w\'\-]*/)		
+		scan(/\w[\w\'\-]*/)					# %Q - double quote, %q - single quote, \w - word character [a-zA-Z0-9]
 	end
 
 end
